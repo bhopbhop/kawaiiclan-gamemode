@@ -258,12 +258,12 @@ net.Receive( Core.Protocol2, BinaryReceive )
 
 
 --- SQL ---
-
+-- ignore this and go down to line 508
 SQL.Available = true
 
 local SQLObject
 local SQLDetails = {
-	Host = "127.0.0.1", Port = 3306,
+	Host = "", Port = 3306 ,
 	User = "root", Pass = "", -- This is default for a lot of servers, but you'll probably have to change this
 	Database = "kawaiiclan_gmod"
 }
@@ -500,7 +500,7 @@ net.Receive("userinterface.network", function(_, cl)
 	DATA[network_id](cl, network_data)
 end)
 
---[[ Temporary MySQL implementation ]] --
+--[[Add MySQL information here and ignore the one above]] --
 MySQL = MySQL or {}
 
 require("mysqloo")
